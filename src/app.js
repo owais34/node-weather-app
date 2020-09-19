@@ -5,6 +5,7 @@ const { response } = require('express')
 const {forecast}=require('./utils/forecast')
 const {geocode}=require('./utils/geocode')
 
+const PORT=process.env.PORT || 3000
 
 const app=express()
 // -----------define paths-------
@@ -75,6 +76,6 @@ app.get('/help/*',(req,res)=>{
 app.get('*',(req,res)=>{
     res.send("My 404 page")
 })
-app.listen(3000,()=>{
-    console.log('server is up')
+app.listen(PORT,()=>{
+    console.log('server is up at ',PORT)
 })
