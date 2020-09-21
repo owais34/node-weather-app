@@ -27,7 +27,7 @@ const forecast=(latitude,longitude,callback)=>{
          temperature:data.current.temperature,
          wind_speed:data.current.wind_speed,
          precipitation:data.current.precip,
-         icon:data.current.weather_icon[0]
+         icon:data.current.weather_icons[0]
      })
     }
     
